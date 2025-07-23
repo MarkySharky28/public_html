@@ -10,7 +10,7 @@ function onframe(){
     let style = "background-color:hsl(" + angle + ",100%," + brightness + "%);--rotation:" + angle2 + "deg"
     console.log(style)
 
-    //document.body.style = "background-color:hsl(" + angle + ",100%, 50%);--rotation:" + angle2 + "deg"
+    //document.body.style = "background-color:hsl" + angle + ",100%, 50%);--rotation:" + angle2 + "deg"
 
 
     document.body.style = style
