@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Food Clicker Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="game.js" defer></script>
+</head>
+
+<body>
+    <div class="screen-overlay">You Have Too Many Widgets</div>
+    <div class="box">
+        <h1 class="center">Asian Food Game</h1>
+        <h2 class="center" id="score">Score: 0</h2>
+        <button id="sell_food"
+            style="position: absolute; top: 20px; left: 20px; width: 200px; height: 60px; font-size: 25px; font-size: x-large; font-weight: 1000;"
+            onclick="sellFood()">Sell Food</button>
+    </div>
+
+    <audio id="chaching" src="assets/chaching.MP3" preload="auto"></audio>
+
+    <div id="store-container">
+        <div class="store" name="Rice" cost="5" onclick="buy(event.currentTarget)">
+            <div class="widget" reap="1" cooldown="1.0" auto="false" name="Rice">
+
+                <div class="box-overlay">Click To Sell</div>
+
+                <img src="assets/rice.png" style="width: auto;">
+                <div class="overlay-slide" style="animation-duration: 1.0s;"></div>
+            </div>
+            <p>Rice Bowl</p>
+            <p>5 Social credit</p>
+            <p>+1 Social credit</p>
+            <p>1.0s</p>
+        </div>
+
+        <div class="store" name="Boba Tea" cost="100" reap="3" cooldown="2.0" auto="true" src="assets/boba.png"
+            onclick="buy(event.currentTarget)">
+            <div class="widget" reap="3" cooldown="2.0" auto="true" name="Boba-Tea">
+
+                <div class="box-overlay">Click To Sell</div>
+
+                <img src="assets/boba.png">
+                <div class="overlay-slide" style="animation-duration: 2s;"></div>
+            </div>
+            <p>Boba Tea</p>
+            <p>100 Social Credit</p>
+            <p>+3 Social Credit</p>
+            <p>2.0s</p>
+        </div>
+
+        <div class="store" name="Steamed Buns" cost="500" reap="15" cooldown="5.0" auto="true" src="assets/baozi.png"
+            onclick="buy(event.currentTarget)">
+            <div class="widget" reap="15" cooldown="5.0" auto="true" name="Steamed-Buns">
+
+                <div class="box-overlay">Click To Sell</div>
+
+                <img src="assets/baozi.png" id="steamed-buns">
+                <div class="overlay-slide" style="animation-duration: 5s;"></div>
+            </div>
+            <p>Stemed Buns</p>
+            <p>500 Social Credit</p>
+            <p>+15 Social Credit</p>
+            <p>5.0s</p>
+        </div>
+
+        <div class="store" name="Mapo Tofu" cost="10000" reap="100" cooldown="5.0" auto="true" src="assets/mapotofu.png"
+            onclick="buy(event.currentTarget)">
+            <div class="widget" reap="100" cooldown="5.0" auto="true" name="Mapo-Tofu">
+
+                <div class="box-overlay">Click To Sell</div>
+
+
+                <img src="assets/mapotofu.png" id="mapo-tofu">
+                <div class="overlay-slide" style="animation-duration: 5s;"></div>
+            </div>
+            <p>Mapo Tofu</p>
+            <p>10k Social Credit</p>
+            <p>+100 Social Credit</p>
+            <p>10.0s</p>
+        </div>
+
+        <div class="store" name="La Mian" cost="25000" reap="4" cooldown="0.2" auto="true" src="assets/lamian.png"
+            onclick="buy(event.currentTarget)">
+            <div class="widget" reap="4" cooldown="0.2" auto="true" name="La-Mian">
+
+                <div class="box-overlay">Click To Sell</div>
+
+
+                <img src="assets/lamian.png" id="la-mian">
+                <div class="overlay-slide" style="animation-duration: 0.2s;"></div>
+            </div>
+            <p>La Mian</p>
+            <p>25k Social Credit</p>
+            <p>+4 Social Credit</p>
+            <p>0.2s</p>
+        </div>
+
+        <div class="store" name="Peking Duck" cost="50000" onclick="buy(event.currentTarget)">
+            <div class="widget" reap="2000" cooldown="60.0" auto="false" name="Peking-Duck">
+
+                <div class="box-overlay">Click To Sell</div>
+
+                <img src="assets/peking_duck.png" style="width: auto;">
+                <div class="overlay-slide" style="animation-duration: 60.0s;"></div>
+            </div>
+            <p>Peking Duck</p>
+            <p>50k Social credit</p>
+            <p>+2k Social credit</p>
+            <p>1 min</p>
+        </div>
+
+    </div>
+
+    <div id="widget-container"></div>
+</body>
+
+</html>
